@@ -1,8 +1,8 @@
-name             'ghalib'
-maintainer       'YOUR_NAME'
-maintainer_email 'YOUR_EMAIL'
+name             'mizra'
+maintainer       'Udbhav Gupta'
+maintainer_email 'dev@udbhavgupta.com'
 license          'All rights reserved'
-description      'Installs/Configures ghalib'
+description      'Recipe to provision a Vagrant development machine'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
 version          '0.1.0'
 
