@@ -2,6 +2,7 @@ include_recipe "apt"
 include_recipe "locale"
 include_recipe "nginx"
 include_recipe "python"
+include_recipe "php"
 
 ENV['LANGUAGE'] = ENV['LANG'] = ENV['LC_ALL'] = "en_US.UTF-8"
 node.default['postgresql']['pg_hba'].unshift({
