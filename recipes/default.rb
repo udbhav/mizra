@@ -4,6 +4,10 @@ include_recipe "nginx"
 include_recipe "python"
 include_recipe "php"
 
+# apache
+include_recipe "apache"
+include_recipe "apache::mod_php5"
+
 ENV['LANGUAGE'] = ENV['LANG'] = ENV['LC_ALL'] = "en_US.UTF-8"
 node.default['postgresql']['pg_hba'].unshift({
   :type => 'host', :db => 'all', :user => 'all', :addr => '127.0.0.1/32', :method => 'trust'})
@@ -34,5 +38,5 @@ execute "rbenv-bundler" do
 end
 
 # mongodb
-include_recipe "mongodb::10gen_repo"
-include_recipe "mongodb::default"
+#include_recipe "mongodb::10gen_repo"
+#include_recipe "mongodb::default"

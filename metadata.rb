@@ -4,7 +4,7 @@ maintainer_email 'dev@udbhavgupta.com'
 license          'All rights reserved'
 description      'Recipe to provision a Vagrant development machine'
 long_description IO.read(File.join(File.dirname(__FILE__), 'README.md'))
-version          '0.1.1'
+version          '0.1.2'
 
 depends "apt"
 depends "nginx"
@@ -17,3 +17,4 @@ depends "supervisor"
 depends "locale"
 depends "mongodb"
 depends "php"
+depends "apache2"
