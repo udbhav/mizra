@@ -9,3 +9,5 @@ default['rbenv']['user_installs'] = [{
     global: '2.1.1',
     gems: {'2.1.1' => [{name: 'bundler'}]}
   }]
+
+default['apache']['listen_ports'] = [81]

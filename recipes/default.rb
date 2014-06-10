@@ -5,8 +5,8 @@ include_recipe "python"
 include_recipe "php"
 
 # apache
-include_recipe "apache"
-include_recipe "apache::mod_php5"
+include_recipe "apache2"
+include_recipe "apache2::mod_php5"
 
 ENV['LANGUAGE'] = ENV['LANG'] = ENV['LC_ALL'] = "en_US.UTF-8"
 node.default['postgresql']['pg_hba'].unshift({
@@ -36,7 +36,3 @@ execute "rbenv-bundler" do
   command "[ -d #{path} ] || git clone #{git_url} #{path}"
   user "vagrant"
 end
-
-# mongodb
-#include_recipe "mongodb::10gen_repo"
-#include_recipe "mongodb::default"
