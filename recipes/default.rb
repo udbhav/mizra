@@ -35,6 +35,7 @@ end
 execute "python_requirements" do
   command "#{node['mizra']['env_root']}/bin/pip install -r requirements.txt"
   cwd node['mizra']['app_root']
+  user node['mizra']['user']
 end
 
 # create db role and db if they don't exist
