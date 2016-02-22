@@ -1,6 +1,42 @@
-Mizra
------
+# mizra-cookbook
 
-Chef recipe used to provision a local development machine with
-[Vagrant](http://www.vagrantup.com/). To see an example of a Vagrant machine
-using it, check out [Ghalib](https://github.com/udbhav/ghalib)..
+TODO: Enter the cookbook description here.
+
+## Supported Platforms
+
+TODO: List your supported platforms.
+
+## Attributes
+
+<table>
+  <tr>
+    <th>Key</th>
+    <th>Type</th>
+    <th>Description</th>
+    <th>Default</th>
+  </tr>
+  <tr>
+    <td><tt>['mizra']['bacon']</tt></td>
+    <td>Boolean</td>
+    <td>whether to include bacon</td>
+    <td><tt>true</tt></td>
+  </tr>
+</table>
+
+## Usage
+
+### mizra::default
+
+Include `mizra` in your node's `run_list`:
+
+```json
+{
+  "run_list": [
+    "recipe[mizra::default]"
+  ]
+}
+```
+
+## License and Authors
+
+Author:: YOUR_NAME (<YOUR_EMAIL>)

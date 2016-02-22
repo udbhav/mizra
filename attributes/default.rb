@@ -1,13 +1,6 @@
-default['ghalib']['user'] = 'vagrant'
-default['ghalib']['app_root'] = '/vagrant'
-default['ghalib']['home'] = '/home/' + default['ghalib']['user']
-default['ruby_build']['upgrade'] = 'yes'
+default['mizra']['user'] = 'vagrant'
+default['mizra']['app_root'] = "/home/#{node['mizra']['user']}/app"
+default['mizra']['env_root'] = "/home/#{node['mizra']['user']}/env"
 
-default['rbenv']['user_installs'] = [{
-    user: 'vagrant',
-    rubies: ['2.1.1'],
-    global: '2.1.1',
-    gems: {'2.1.1' => [{name: 'bundler'}]}
-  }]
-
-default['apache']['listen_ports'] = [81]
+default['mizra']['db']['name'] = "mizra"
+default['mizra']['db']['user'] = "vagrant"
