@@ -2,7 +2,13 @@ ENV['LANGUAGE'] = ENV['LANG'] = ENV['LC_ALL'] = "en_US.UTF-8"
 # trust anything
 node.default['postgresql']['pg_hba'] = [{
   :type => 'host', :db => 'all', :user => 'all', :addr => '127.0.0.1/32', :method => 'trust'}]
-
+# node.default['postgresql']['version'] = "9.4"
+node.default['postgresql']['version'] = "9.4"
+node.default['postgresql']['dir'] = "/etc/postgresql/9.4/main"
+node.default['postgresql']['server']['service_name'] = "postgresql"
+node.default['postgresql']['client']['packages'] = ["postgresql-client-9.4","libpq-dev"]
+node.default['postgresql']['server']['packages'] = ["postgresql-9.4"]
+node.default['postgresql']['contrib']['packages'] = ["postgresql-contrib-9.4"]
 include_recipe "postgresql::server"
 
 service "postgresql" do
